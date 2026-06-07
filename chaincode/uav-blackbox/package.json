@@ -1,0 +1,19 @@
+{
+  "name": "uav-blackbox-chaincode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hyperledger Fabric chaincode for trusted UAV flight log notarization.",
+  "main": "index.js",
+  "scripts": {
+    "start": "fabric-chaincode-node start",
+    "build": "node --check index.js && node --check lib/ledger.js && node --check lib/contracts/uavIdentityContract.js && node --check lib/contracts/missionLogContract.js && node --check lib/contracts/evidenceContract.js && node --check lib/contracts/accessControlContract.js && node --check lib/contracts/emergencyLinkageContract.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.5.8",
+    "fabric-shim": "^2.5.8"
+  }
+}
+

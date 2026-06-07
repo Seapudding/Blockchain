@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.env
+.DS_Store
+npm-debug.log*
+
+# Runtime data produced by the local demo API.
+data/offchain/**
+!data/offchain/.gitkeep
+data/mock-ledger.json
+
+# Fabric material should be generated locally.
+wallet/
+organizations/
+connection-*.json
+
